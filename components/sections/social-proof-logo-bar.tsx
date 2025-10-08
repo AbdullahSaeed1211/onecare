@@ -36,7 +36,7 @@ export function SocialProofLogoBar() {
           }
         }
       `}</style>
-      <section className="bg-background border-b py-12">
+      <section className="bg-background border-b md:py-12">
         <div className="container-padding-x container mx-auto">
         <div className="text-center mb-8">
           <Tagline>Trusted By</Tagline>

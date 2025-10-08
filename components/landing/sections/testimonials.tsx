@@ -17,7 +17,7 @@ export default function TestimonialsSection({
 }: TestimonialsSectionProps) {
   return (
     <section
-      className="dark:bg-background container-padding-x section-padding-y flex flex-col items-center border-b bg-blue-950"
+      className="container-padding-x section-padding-y flex flex-col items-center border-b bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10"
       aria-labelledby="testimonial-title"
     >
       {/* Content Container */}
@@ -25,7 +25,7 @@ export default function TestimonialsSection({
         {/* Testimonial Quote */}
         <blockquote
           id="testimonial-title"
-          className="text-center text-xl font-medium text-white md:text-3xl"
+          className="text-center text-xl font-medium text-foreground leading-relaxed md:text-3xl"
         >
           &quot;{quote}&quot;
         </blockquote>
@@ -33,19 +33,19 @@ export default function TestimonialsSection({
         {/* Author Information */}
         <div className="flex flex-col items-center gap-4">
           {/* Author Avatar */}
-          <Avatar className="h-12 w-12 rounded-xl ring-2 ring-white md:h-14 md:w-14">
+          <Avatar className="h-12 w-12 rounded-xl ring-2 ring-primary/20 md:h-14 md:w-14">
             <AvatarImage src={avatarSrc} alt={authorName} />
           </Avatar>
 
           {/* Author Details */}
           <div className="flex flex-col items-center gap-1 md:flex-row md:gap-2">
-            <span className="text-base font-medium text-white">
+            <span className="text-base font-semibold text-foreground">
               {authorName}
             </span>
-            <span className="hidden text-white opacity-50 md:inline-block">
+            <span className="hidden text-muted-foreground md:inline-block">
               •
             </span>
-            <span className="text-base text-white/80">{authorRole}</span>
+            <span className="text-base text-muted-foreground">{authorRole}</span>
           </div>
         </div>
       </div>
