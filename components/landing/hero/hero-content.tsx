@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
 import { Tagline } from "@/components/landing/shared/tagline";
 import { Highlighter } from "@/components/ui/highlighter";
-import Image from "next/image";
+import { ProgressiveImage } from "@/components/ui/progressive-image";
+import { blurPlaceholders } from "@/lib/image-utils";
+import { BlurFade } from "@/components/ui/blur-fade";
 import { useEffect, useRef } from "react";
 
 export function HeroContent() {
@@ -76,18 +78,18 @@ export function HeroContent() {
               </span>
             </div>
 
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1600 ease-out">
+            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1400 ease-out">
               <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1800 ease-out" />
+                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1600 ease-out" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
                 Both online and in-person sessions
               </span>
             </div>
 
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1800 ease-out">
+            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1400 ease-out">
               <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-2000 ease-out" />
+                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1600 ease-out" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
                 Personalized care that fits your schedule
@@ -101,12 +103,12 @@ export function HeroContent() {
               <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
               <span>No commitment required</span>
             </div>
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2500 ease-out">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2600 ease-out" />
+            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2400 ease-out">
+              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
               <span>Free initial consultation</span>
             </div>
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2600 ease-out">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2700 ease-out" />
+            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2400 ease-out">
+              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
               <span>Cancel anytime</span>
             </div>
           </div>
@@ -124,19 +126,28 @@ export function HeroContent() {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-[0_0_60%] relative w-full max-w-4xl aspect-[4/3] animate-on-scroll opacity-0 translate-x-4 transition-all duration-1000 delay-800 ease-out">
+        <div className="flex flex-[0_0_60%] relative w-full max-w-4xl aspect-[4/3]">
           {/* Main Image */}
-          <div className="absolute inset-4 z-10 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 animate-on-scroll opacity-0 scale-98 transition-all duration-800 delay-1200 ease-out">
-            <Image
+          <BlurFade
+            direction="up"
+            duration={0.8}
+            delay={0.3}
+            offset={40}
+            blur="8px"
+            className="absolute inset-4 z-10 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5"
+          >
+            <ProgressiveImage
               src="/hero.jpg"
               alt="Professional therapist providing compassionate mental health care in a comfortable, modern setting"
               fill
               priority
+              blurDataURL={blurPlaceholders.hero}
+              transitionDuration={800}
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
             {/* Subtle overlay for better text contrast */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-3xl transition-opacity duration-500"></div>
-          </div>
+          </BlurFade>
         </div>
       </div>
     </section>
