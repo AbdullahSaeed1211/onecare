@@ -44,7 +44,9 @@ export function HeroContent() {
           {/* Section Title */}
           <div className="section-title-gap-xl flex flex-col animate-on-scroll opacity-0 translate-y-2 transition-all duration-1000 ease-out">
             {/* Tagline */}
-            <Tagline className="animate-on-scroll opacity-0 translate-y-1 transition-all duration-800 delay-300 ease-out">OneCare</Tagline>
+            <Tagline className="animate-on-scroll opacity-0 translate-y-1 transition-all duration-800 delay-300 ease-out">
+              One<span className="text-accent font-semibold">Care</span>
+            </Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-on-scroll opacity-0 translate-y-2 transition-all duration-1000 delay-600 ease-out">
               Quality{" "}
