@@ -23,18 +23,18 @@ export function BentoGrid() {
           {/* Wide Feature Card - Top Left */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-2 hover-lift transition-all duration-300 cursor-pointer group">
             <Image
-              src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=813&h=332&fit=crop&crop=center"
+              src="/bento/bento-1.jpg"
               alt="Therapist and client having a secure video consultation"
               width={813}
               height={332}
-              className="hidden h-auto w-full object-cover md:block md:h-[332px] transition-transform duration-500 group-hover:scale-105"
+              className="hidden w-full h-[332px] object-cover lg:block transition-transform duration-500 group-hover:scale-105"
             />
             <Image
-              src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=480&h=332&fit=crop&crop=center"
+              src="/bento/bento-1.jpg"
               alt="Therapist and client having a secure video consultation"
               width={480}
               height={332}
-              className="block h-auto w-full object-cover md:hidden transition-transform duration-500 group-hover:scale-105"
+              className="block w-full h-[332px] object-cover lg:hidden transition-transform duration-500 group-hover:scale-105"
             />
             <CardContent className="flex flex-col gap-2 p-6">
               <h3 className="text-foreground text-lg font-semibold">
@@ -48,11 +48,11 @@ export function BentoGrid() {
           {/* Regular Feature Card - Top Right */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-1 hover-lift transition-all duration-300 cursor-pointer group">
             <Image
-              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=480&h=332&fit=crop&crop=center"
+              src="/bento/bento-2.jpg"
               alt="Mental health progress tracking and goal setting interface"
               width={480}
               height={332}
-              className="h-auto w-full object-cover md:h-[332px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-[332px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <CardContent className="flex flex-col gap-2 p-6">
               <h3 className="text-foreground text-lg font-semibold">
@@ -66,11 +66,11 @@ export function BentoGrid() {
           {/* Regular Feature Card - Bottom Left */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-1 hover-lift transition-all duration-300 cursor-pointer group">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=332&fit=crop&crop=center"
+              src="/bento/bento-3.jpg"
               alt="Mental health resource library with wellness articles and exercises"
               width={480}
               height={332}
-              className="h-auto w-full object-cover md:h-[332px] transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-[332px] object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <CardContent className="flex flex-col gap-2 p-6">
               <h3 className="text-foreground text-lg font-semibold">
@@ -84,18 +84,18 @@ export function BentoGrid() {
           {/* Wide Feature Card - Bottom Right */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-2 hover-lift transition-all duration-300 cursor-pointer group">
             <Image
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=813&h=332&fit=crop&crop=center"
+              src="/bento/bento-4.jpg"
               alt="Professional healthcare scheduling and appointment booking interface"
               width={813}
               height={332}
-              className="hidden h-[332px] w-full object-cover md:block transition-transform duration-500 group-hover:scale-105"
+              className="hidden w-full h-[332px] object-cover lg:block transition-transform duration-500 group-hover:scale-105"
             />
             <Image
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=480&h=332&fit=crop&crop=center"
+              src="/bento/bento-4.jpg"
               alt="Professional healthcare scheduling and appointment booking interface"
               width={480}
               height={332}
-              className="block h-auto w-full object-cover md:hidden md:h-[332px] transition-transform duration-500 group-hover:scale-105"
+              className="block w-full h-[332px] object-cover lg:hidden transition-transform duration-500 group-hover:scale-105"
             />
             <CardContent className="flex flex-col gap-2 p-6">
               <h3 className="text-foreground text-lg font-semibold">
