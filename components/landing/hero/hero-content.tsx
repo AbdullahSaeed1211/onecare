@@ -42,11 +42,11 @@ export function HeroContent() {
         {/* Left Column */}
         <div className="flex flex-[0_0_40%] flex-col gap-6 lg:gap-8">
           {/* Section Title */}
-          <div className="section-title-gap-xl flex flex-col animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 ease-out">
+          <div className="section-title-gap-xl flex flex-col animate-on-scroll opacity-0 translate-y-2 transition-all duration-1000 ease-out">
             {/* Tagline */}
-            <Tagline className="animate-on-scroll opacity-0 translate-y-2 transition-all duration-500 delay-100">OneCare</Tagline>
+            <Tagline className="animate-on-scroll opacity-0 translate-y-1 transition-all duration-800 delay-300 ease-out">OneCare</Tagline>
             {/* Main Heading */}
-            <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 delay-200">
+            <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-on-scroll opacity-0 translate-y-2 transition-all duration-1000 delay-600 ease-out">
               Quality{" "}
               <Highlighter action="underline" color="#FF9800" animationDuration={1200} isView>
                 mental health
@@ -57,35 +57,35 @@ export function HeroContent() {
               </Highlighter>
             </h1>
             {/* Description */}
-            <p className="text-muted-foreground text-base lg:text-lg animate-on-scroll opacity-0 translate-y-2 transition-all duration-500 delay-400">
+            <p className="text-muted-foreground text-base lg:text-lg animate-on-scroll opacity-0 translate-y-1 transition-all duration-800 delay-900 ease-out">
               Connect with licensed therapists, psychiatrists, and wellness professionals
               for personalized care that fits your lifestyle and goals
             </p>
           </div>
 
           {/* Feature List */}
-          <div className="flex flex-col gap-2 md:gap-3 animate-on-scroll opacity-0 translate-y-4 transition-all duration-500 delay-500">
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-4 transition-all duration-500 delay-600">
+          <div className="flex flex-col gap-2 md:gap-3 animate-on-scroll opacity-0 translate-y-2 transition-all duration-800 delay-1200 ease-out">
+            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1400 ease-out">
               <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-75 transition-all duration-300 delay-700" />
+                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1600 ease-out" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
                 Licensed therapists and psychiatrists
               </span>
             </div>
 
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-4 transition-all duration-500 delay-700">
+            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1600 ease-out">
               <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-75 transition-all duration-300 delay-800" />
+                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1800 ease-out" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
                 Both online and in-person sessions
               </span>
             </div>
 
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-4 transition-all duration-500 delay-800">
+            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1800 ease-out">
               <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-75 transition-all duration-300 delay-900" />
+                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-2000 ease-out" />
               </div>
               <span className="text-card-foreground text-base leading-6 font-medium">
                 Personalized care that fits your schedule
@@ -94,27 +94,27 @@ export function HeroContent() {
           </div>
 
           {/* Trust Signals */}
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground animate-on-scroll opacity-0 translate-y-4 transition-all duration-500 delay-1000">
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-2 transition-all duration-300 delay-1100">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-75 transition-all duration-300 delay-1150" />
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground animate-on-scroll opacity-0 translate-y-2 transition-all duration-600 delay-2200 ease-out">
+            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2400 ease-out">
+              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
               <span>No commitment required</span>
             </div>
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-2 transition-all duration-300 delay-1200">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-75 transition-all duration-300 delay-1250" />
+            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2500 ease-out">
+              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2600 ease-out" />
               <span>Free initial consultation</span>
             </div>
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-2 transition-all duration-300 delay-1300">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-75 transition-all duration-300 delay-1350" />
+            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2600 ease-out">
+              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2700 ease-out" />
               <span>Cancel anytime</span>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-3 animate-on-scroll opacity-0 translate-y-4 transition-all duration-500 delay-1400">
-            <Button size="lg" className="text-base px-8 py-3 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 animate-on-scroll opacity-0 scale-95 transition-all duration-300 delay-1500">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-3 animate-on-scroll opacity-0 translate-y-2 transition-all duration-600 delay-2800 ease-out">
+            <Button size="lg" className="text-base px-8 py-3 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-on-scroll opacity-0 scale-95 transition-all duration-500 delay-3000 ease-out">
               Get Started Today
             </Button>
-            <Button variant="outline" size="lg" className="text-base px-6 py-3 border-2 hover:bg-accent hover:border-accent hover:scale-105 transition-all duration-200 animate-on-scroll opacity-0 scale-95 transition-all duration-300 delay-1600">
+            <Button variant="outline" size="lg" className="text-base px-6 py-3 border-2 hover:bg-accent hover:border-accent hover:scale-105 transition-all duration-300 animate-on-scroll opacity-0 scale-95 transition-all duration-500 delay-3100 ease-out">
               How it works
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
@@ -122,9 +122,9 @@ export function HeroContent() {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-[0_0_60%] relative w-full max-w-4xl aspect-[4/3] animate-on-scroll opacity-0 translate-x-8 transition-all duration-700 delay-300">
+        <div className="flex flex-[0_0_60%] relative w-full max-w-4xl aspect-[4/3] animate-on-scroll opacity-0 translate-x-4 transition-all duration-1000 delay-800 ease-out">
           {/* Main Image */}
-          <div className="absolute inset-4 z-10 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 animate-on-scroll opacity-0 scale-95 transition-all duration-500 delay-500">
+          <div className="absolute inset-4 z-10 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5 animate-on-scroll opacity-0 scale-98 transition-all duration-800 delay-1200 ease-out">
             <Image
               src="/hero.jpg"
               alt="Professional therapist providing compassionate mental health care in a comfortable, modern setting"
