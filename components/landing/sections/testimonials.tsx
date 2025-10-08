@@ -13,7 +13,7 @@ export default function TestimonialsSection({
   quote = "MindSpace is like having a photographic memory for every meeting. We reduced the follow-up emails by 80%.",
   authorName = "David Park",
   authorRole = "Engineering Manager at TechCorp",
-  avatarSrc = "/DavidPark.png",
+  avatarSrc = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
 }: TestimonialsSectionProps) {
   return (
     <section

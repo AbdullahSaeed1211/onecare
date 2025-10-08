@@ -23,7 +23,7 @@ export function TherapySection() {
         quote="The medication management support from OneCare has been life-changing. Having a psychiatrist who actually listens and adjusts treatment based on how I feel is incredible."
         authorName="Michael Chen"
         authorRole="Software Engineer at InnovateLabs"
-        avatarSrc="/MichaelChen.png"
+        avatarSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
       />
 
       {/* Why Choose OneCare Feature Spotlight */}
