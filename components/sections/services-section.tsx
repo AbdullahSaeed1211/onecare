@@ -1,20 +1,18 @@
-import { LogoSection10 } from "@/components/pro-blocks/landing-page/logo-sections/logo-section";
-import TestimonialsSection1 from "@/components/pro-blocks/landing-page/testimonials-sections/testimonials-section";
-import { BentoGrid6 } from "@/components/pro-blocks/landing-page/bento-grids/bento-grid";
-import { FeatureSection9 } from "@/components/pro-blocks/landing-page/feature-sections/feature-section";
+import TestimonialsSection from "@/components/landing/sections/testimonials";
+import { BentoGrid } from "@/components/landing/sections/bento-grid";
+import { FeatureSection } from "@/components/landing/sections/features";
 
 export function ServicesSection() {
   return (
     <>
-      <LogoSection10 />
-      <TestimonialsSection1
+      <TestimonialsSection
         quote="OneCare helped me find the right therapist in just two days. The personalized matching made all the difference in my journey to better mental health."
         authorName="Sarah Johnson"
         authorRole="Marketing Director at WellnessCo"
         avatarSrc="/SarahJohnson.png"
       />
-      <BentoGrid6 />
-      <FeatureSection9 />
+      <BentoGrid />
+      <FeatureSection />
     </>
   );
 }

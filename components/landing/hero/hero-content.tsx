@@ -2,32 +2,29 @@
 
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
-import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
+import { Tagline } from "@/components/landing/shared/tagline";
 import { Highlighter } from "@/components/ui/highlighter";
 import Image from "next/image";
 
-export function HeroSection2() {
+export function HeroContent() {
   return (
     <section
       className="relative bg-secondary section-padding-y overflow-hidden"
       aria-labelledby="hero-heading"
     >
-      {/* Landing Wide Hero Background */}
+      {/* Subtle Hero Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
-        <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-pulse" />
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 bg-primary/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-accent/3" />
       </div>
       <div className="container-padding-x container mx-auto flex flex-col items-center gap-6 lg:flex-row lg:gap-16">
         {/* Left Column */}
-        <div className="flex flex-2 flex-col gap-6 lg:gap-8">
+        <div className="flex flex-[0_0_40%] flex-col gap-6 lg:gap-8">
           {/* Section Title */}
           <div className="section-title-gap-xl flex flex-col">
             {/* Tagline */}
             <Tagline>OneCare</Tagline>
             {/* Main Heading */}
-            <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               Quality{" "}
               <Highlighter action="underline" color="#FF9800" animationDuration={800} isView>
                 mental health
@@ -74,30 +71,47 @@ export function HeroSection2() {
             </div>
           </div>
 
+          {/* Trust Signals */}
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Check className="text-success h-4 w-4" />
+              <span>No commitment required</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="text-success h-4 w-4" />
+              <span>Free initial consultation</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Check className="text-success h-4 w-4" />
+              <span>Cancel anytime</span>
+            </div>
+          </div>
+
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <Button>Get Started Today</Button>
-            <Button variant="ghost">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-3">
+            <Button size="lg" className="text-base px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-200">
+              Get Started Today
+            </Button>
+            <Button variant="outline" size="lg" className="text-base px-6 py-3 border-2 hover:bg-accent hover:border-accent">
               How it works
-              <ArrowRight />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-1 relative w-full max-w-4xl aspect-[4/3]">
-          {/* Background Blob */}
-          <div className="absolute inset-0 z-0 rounded-[50%] bg-gradient-to-br from-blue-100 to-green-100 blur-3xl opacity-60"></div>
-
+        <div className="flex flex-[0_0_60%] relative w-full max-w-4xl aspect-[4/3]">
           {/* Main Image */}
-          <div className="absolute inset-8 z-10 rounded-3xl shadow-2xl border-4 border-white overflow-hidden">
+          <div className="absolute inset-4 z-10 rounded-3xl shadow-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
             <Image
               src="/hero.jpg"
-              alt="Therapy session - person talking with mental health professional"
+              alt="Professional therapist providing compassionate mental health care in a comfortable, modern setting"
               fill
               priority
               className="h-full w-full object-cover"
             />
+            {/* Subtle overlay for better text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent rounded-3xl"></div>
           </div>
         </div>
       </div>

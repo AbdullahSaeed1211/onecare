@@ -1,9 +1,9 @@
 "use client";
 
 import { User, MessageSquare, Heart, Calendar } from "lucide-react";
-import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
+import { Tagline } from "@/components/landing/shared/tagline";
 
-export function FeatureSection9() {
+export function FeatureSection() {
   return (
     <section
       className="bg-secondary section-padding-y border-b"

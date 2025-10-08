@@ -7,9 +7,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
-import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
+import { Tagline } from "@/components/landing/shared/tagline";
 
-export function FaqSection2() {
+export function FaqSection() {
   return (
     <section
       className="bg-background section-padding-y border-b"

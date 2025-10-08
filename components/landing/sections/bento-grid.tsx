@@ -2,9 +2,9 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
+import { Tagline } from "@/components/landing/shared/tagline";
 
-export function BentoGrid6() {
+export function BentoGrid() {
   return (
     <section className="bg-background section-padding-y border-b" id="features">
       <div className="container-padding-x container mx-auto flex flex-col gap-10 md:gap-12">

@@ -2,19 +2,19 @@
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
-interface TestimonialsSection1Props {
+interface TestimonialsSectionProps {
   quote?: string;
   authorName?: string;
   authorRole?: string;
   avatarSrc?: string;
 }
 
-export default function TestimonialsSection1({
+export default function TestimonialsSection({
   quote = "MindSpace is like having a photographic memory for every meeting. We reduced the follow-up emails by 80%.",
   authorName = "David Park",
   authorRole = "Engineering Manager at TechCorp",
   avatarSrc = "/DavidPark.png",
-}: TestimonialsSection1Props) {
+}: TestimonialsSectionProps) {
   return (
     <section
       className="dark:bg-background container-padding-x section-padding-y flex flex-col items-center border-b bg-blue-950"

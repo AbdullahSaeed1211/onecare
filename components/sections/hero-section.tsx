@@ -1,13 +1,13 @@
 "use client";
 
-import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/navbar";
-import { HeroSection2 } from "@/components/pro-blocks/landing-page/hero-sections/hero-section";
+import { Navbar } from "@/components/landing/hero/navbar";
+import { HeroContent } from "@/components/landing/hero/hero-content";
 
 export function HeroSection() {
   return (
     <>
-      <LpNavbar1 />
-      <HeroSection2 />
+      <Navbar />
+      <HeroContent />
     </>
   );
 }

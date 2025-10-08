@@ -1,12 +1,11 @@
-import { FaqSection2 } from "@/components/pro-blocks/landing-page/faq-sections/faq-section";
-import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer";
+import { FaqSection } from "@/components/landing/sections/faq";
+import { Footerdemo } from "@/components/ui/footer-section";
 import { AppointmentBookingForm } from "@/components/ui/appointment-booking-form";
-import { EmergencyResources } from "@/components/ui/emergency-resources";
 
 export function FaqFooterSection() {
   return (
     <>
-      <FaqSection2 />
+      <FaqSection />
 
       {/* Appointment Booking Form */}
       <section className="bg-secondary section-padding-y border-b">
@@ -15,10 +14,8 @@ export function FaqFooterSection() {
         />
       </section>
 
-      {/* Emergency Resources - Available at bottom for those who need it */}
-      <EmergencyResources />
 
-      <Footer1 />
+      <Footerdemo />
     </>
   );
 }

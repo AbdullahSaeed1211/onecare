@@ -1,6 +1,6 @@
 "use client";
 
-import { Logo } from "@/components/pro-blocks/logo";
+import { Logo } from "@/components/landing/shared/logo";
 import { Button } from "@/components/ui/button";
 import { ContactModal } from "@/components/ui/contact-modal";
 import { Menu, X } from "lucide-react";
@@ -20,10 +20,13 @@ interface NavMenuItemsProps {
 }
 
 const NavMenuItems = ({ className }: NavMenuItemsProps) => (
-  <div className={`flex flex-col gap-1 md:flex-row ${className ?? ""}`}>
+  <div className={`flex flex-col gap-2 md:flex-row md:gap-1 ${className ?? ""}`}>
     {MENU_ITEMS.map(({ label, href }) => (
-      <Link key={label} href={href}>
-        <Button variant="ghost" className="w-full md:w-auto">
+      <Link key={label} href={href} className="touch-manipulation">
+        <Button
+          variant="ghost"
+          className="w-full md:w-auto justify-start md:justify-center min-h-12 md:min-h-10 touch-manipulation active:scale-95 transition-transform"
+        >
           {label}
         </Button>
       </Link>
@@ -31,7 +34,7 @@ const NavMenuItems = ({ className }: NavMenuItemsProps) => (
   </div>
 );
 
-export function LpNavbar1() {
+export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
@@ -40,16 +43,16 @@ export function LpNavbar1() {
     <nav className="bg-background sticky top-0 isolate z-50 border-b py-3.5 md:py-4">
       <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
         <div className="flex items-center justify-between">
-          <Link href="/">
+          <Link href="/" className="touch-manipulation">
             <Logo />
           </Link>
           <Button
             variant="ghost"
-            className="flex size-9 items-center justify-center md:hidden"
+            className="flex size-12 items-center justify-center md:hidden touch-manipulation active:scale-95 transition-transform"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
@@ -66,14 +69,20 @@ export function LpNavbar1() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="flex w-full flex-col justify-end gap-5 pb-2.5 md:hidden">
+          <div className="flex w-full flex-col justify-end gap-3 pb-4 md:hidden border-t pt-4 mt-4">
             <NavMenuItems />
-            <ContactModal>
-              <Button variant="outline" className="w-full">Contact Us</Button>
-            </ContactModal>
-            <Link href="#pricing">
-              <Button className="w-full">Get Started</Button>
-            </Link>
+            <div className="flex flex-col gap-3 pt-2">
+              <ContactModal>
+                <Button variant="outline" className="w-full min-h-12 touch-manipulation active:scale-95 transition-transform">
+                  Contact Us
+                </Button>
+              </ContactModal>
+              <Link href="#pricing" className="touch-manipulation">
+                <Button className="w-full min-h-12 touch-manipulation active:scale-95 transition-transform">
+                  Get Started
+                </Button>
+              </Link>
+            </div>
           </div>
         )}
       </div>

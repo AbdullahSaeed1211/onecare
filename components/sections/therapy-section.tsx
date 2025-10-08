@@ -1,5 +1,5 @@
 import { ContentWithIllustration } from "@/components/ui/content-with-illustration";
-import TestimonialsSection1 from "@/components/pro-blocks/landing-page/testimonials-sections/testimonials-section";
+import TestimonialsSection from "@/components/landing/sections/testimonials";
 import { AnimatedFeatureSpotlight } from "@/components/ui/feature-spotlight";
 
 export function TherapySection() {
@@ -19,7 +19,7 @@ export function TherapySection() {
         iconAlt="Heart icon representing care"
       />
 
-      <TestimonialsSection1
+      <TestimonialsSection
         quote="The medication management support from OneCare has been life-changing. Having a psychiatrist who actually listens and adjusts treatment based on how I feel is incredible."
         authorName="Michael Chen"
         authorRole="Software Engineer at InnovateLabs"

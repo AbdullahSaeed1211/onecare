@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/navbar";
+import { Navbar } from "@/components/landing/hero/navbar";
 import { HeroEmpathy } from "@/components/sections/hero-test/hero-empathy";
 import { HeroAction } from "@/components/sections/hero-test/hero-action";
 import { HeroAuthority } from "@/components/sections/hero-test/hero-authority";
@@ -7,7 +7,7 @@ import { HeroAuthority } from "@/components/sections/hero-test/hero-authority";
 export default function HeroTestPage() {
   return (
     <main>
-      <LpNavbar1 />
+      <Navbar />
 
       {/* Hero Option 1: Empathy-First */}
       <section className="py-16 bg-muted/30">
