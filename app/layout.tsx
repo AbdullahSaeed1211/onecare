@@ -12,6 +12,16 @@ export const metadata: Metadata = {
   title: "OneCare - Modern Wellness & Mental Health Services",
   description:
     "Connect with licensed therapists, psychiatrists, and wellness professionals for personalized mental health care. Quality support that fits your lifestyle, schedule, and goals.",
+  openGraph: {
+    images: [
+      {
+        url: "https://onecare-nine.vercel.app/logo.png",
+        width: 40,
+        height: 40,
+        alt: "OneCare Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
