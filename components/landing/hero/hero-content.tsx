@@ -31,14 +31,14 @@ export function HeroContent() {
   return (
     <section
       ref={heroRef}
-      className="relative bg-secondary section-padding-y overflow-hidden"
+      className="relative bg-secondary pt-12 md:pt-16 lg:pt-20 pb-12 md:pb-16 lg:pb-20 overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Subtle Hero Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-accent/3" />
       </div>
-      <div className="container-padding-x container mx-auto flex flex-col items-center gap-6 lg:flex-row lg:gap-16">
+      <div className="container-padding-x container mx-auto flex flex-col items-center gap-6 lg:flex-row lg:gap-12">
         {/* Left Column */}
         <div className="flex flex-[0_0_40%] flex-col gap-6 lg:gap-8">
           {/* Section Title */}
