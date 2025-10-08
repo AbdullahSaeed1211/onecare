@@ -12,9 +12,9 @@ export const Logo: React.FC<LogoProps> = ({ className }) => {
       <Image
         src="/logo.png"
         alt="OneCare Logo"
-        width={32}
-        height={32}
-        className="w-8 h-8"
+        width={40}
+        height={40}
+        className="w-10 h-10"
         priority
       />
       <div
