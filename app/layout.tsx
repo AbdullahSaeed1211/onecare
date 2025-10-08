@@ -24,9 +24,6 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <head />
         <body className={`${onest.variable} relative antialiased`}>
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
           {children}
         </body>
       </html>

@@ -142,22 +142,6 @@
     outline: none;
   }
 
-  /* Skip link for keyboard navigation */
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: var(--primary);
-    color: var(--primary-foreground);
-    padding: 8px;
-    text-decoration: none;
-    border-radius: var(--radius);
-    z-index: 100;
-  }
-
-  .skip-link:focus {
-    top: 6px;
-  }
 
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
