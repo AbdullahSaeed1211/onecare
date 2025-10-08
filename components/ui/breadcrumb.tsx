@@ -64,5 +64,5 @@ export function OneCareBreadcrumb({ currentPage }: { currentPage?: string }) {
     baseItems.push({ label: currentPage, current: true });
   }
 
-  return <Breadcrumb items={baseItems} className="mb-6" />;
+  return <Breadcrumb items={baseItems} className="mb-2" />;
 }

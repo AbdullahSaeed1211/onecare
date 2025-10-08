@@ -170,6 +170,11 @@ export const AppointmentBookingForm = React.forwardRef<HTMLDivElement, Appointme
               </motion.div>
 
               <motion.div variants={itemVariants} className="pt-4">
+                <div className="text-center mb-4">
+                  <p className="text-sm text-muted-foreground">
+                    Your information is 100% confidential. This initial 15-minute chat is free and helps us find the best fit for you.
+                  </p>
+                </div>
                 <Button type="submit" size="lg" className="w-full h-12 text-lg">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -183,18 +188,24 @@ export const AppointmentBookingForm = React.forwardRef<HTMLDivElement, Appointme
 
           {/* Right Side: Image */}
           <motion.div
-            className="relative h-full min-h-[400px] lg:min-h-[500px]"
+            className="relative h-full min-h-[400px] lg:min-h-[500px] flex items-center justify-center"
             variants={itemVariants}
           >
-            <Image
-              src={imageUrl}
-              alt="Therapy consultation session"
-              fill
-              className="object-cover"
-              priority={false}
-            />
-            {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            {/* Halo Circle Background */}
+            <div className="absolute w-80 h-80 lg:w-96 lg:h-96 bg-primary/10 rounded-full blur-3xl" />
+
+            {/* Image Container */}
+            <div className="relative z-10 w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl">
+              <Image
+                src={imageUrl}
+                alt="Therapy consultation session"
+                fill
+                className="object-cover"
+                priority={false}
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-full" />
+            </div>
           </motion.div>
         </div>
       </div>
