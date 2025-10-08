@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface LogoProps {
   width?: number;
   height?: number;
@@ -6,11 +8,21 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
-    <div
-      className={`font-bold text-xl md:text-2xl ${className || ""}`}
-      style={{ fontFamily: 'Onest, sans-serif' }}
-    >
-      OneCare
+    <div className={`flex items-center gap-2 ${className || ""}`}>
+      <Image
+        src="/logo.png"
+        alt="OneCare Logo"
+        width={32}
+        height={32}
+        className="w-8 h-8"
+        priority
+      />
+      <div
+        className="font-bold text-xl md:text-2xl"
+        style={{ fontFamily: 'Onest, sans-serif' }}
+      >
+        One<span className="text-accent">Care</span>
+      </div>
     </div>
   );
 };
