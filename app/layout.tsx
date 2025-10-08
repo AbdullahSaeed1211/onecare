@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://onecare-nine.vercel.app/logo.png",
+        url: "public/logo.png",
         width: 40,
         height: 40,
         alt: "OneCare Logo",
