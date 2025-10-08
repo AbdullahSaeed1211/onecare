@@ -55,24 +55,29 @@ export const ContentWithIllustration: React.FC<ContentWithIllustrationProps> = (
             {titleParts.map((part, index) =>
               part.toLowerCase() === highlightedText.toLowerCase() ? (
                 <span key={index} className="relative inline-block whitespace-nowrap">
-                  {/* The hand-drawn circle SVG */}
+                  {/* Enhanced highlight effect with animation */}
+                  <span className="relative z-10 px-3 py-2 rounded-xl bg-gradient-to-r from-primary/15 via-accent/20 to-primary/15 shadow-lg border border-primary/20 animate-pulse">
+                    <span className="relative bg-gradient-to-r from-primary via-accent-secondary to-primary bg-clip-text text-transparent font-bold drop-shadow-sm">
+                      {part}
+                    </span>
+                  </span>
+                  {/* Decorative underline */}
                   <svg
                     aria-hidden="true"
-                    className="absolute top-1/2 left-1/2 w-[115%] h-[160%] -translate-x-1/2 -translate-y-1/2 text-primary/80 dark:text-primary/60 pointer-events-none"
-                    viewBox="0 0 200 60"
+                    className="absolute -bottom-1 left-0 w-full h-2 text-primary/60 animate-pulse"
+                    viewBox="0 0 100 8"
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M10,30 C20,5, 180,5, 190,30 C180,55, 20,55, 10,30 Z"
+                      d="M0,4 Q25,1 50,4 T100,4"
                       stroke="currentColor"
-                      strokeWidth="3"
+                      strokeWidth="2"
                       fill="none"
                       strokeLinecap="round"
-                      strokeLinejoin="round"
+                      className="animate-draw-line"
                     />
                   </svg>
-                  {part}
                 </span>
               ) : (
                 part

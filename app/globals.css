@@ -203,6 +203,33 @@
     outline-offset: 2px;
   }
 
+  /* SVG line drawing animation */
+  .animate-draw-line {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawLine 2s ease-in-out forwards;
+  }
+
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  /* Subtle icon animations */
+  .animate-subtle-spin {
+    animation: subtleSpin 8s linear infinite;
+  }
+
+  @keyframes subtleSpin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   /* Smooth animations for better UX */
   * {
     transition-property: color, background-color, border-color, opacity, transform;

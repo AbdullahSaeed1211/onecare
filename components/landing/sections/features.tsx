@@ -22,8 +22,8 @@ export function FeatureSection() {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <User className="text-primary h-5 w-5" />
+            <div className="bg-background flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
+              <User className="text-primary h-7 w-7" />
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-foreground font-semibold">1. Tell us about yourself</h3>
@@ -33,8 +33,8 @@ export function FeatureSection() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <MessageSquare className="text-primary h-5 w-5" />
+            <div className="bg-background flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
+              <MessageSquare className="text-primary h-7 w-7" />
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-foreground font-semibold">2. Get matched</h3>
@@ -44,8 +44,8 @@ export function FeatureSection() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <Heart className="text-primary h-5 w-5" />
+            <div className="bg-background flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
+              <Heart className="text-primary h-7 w-7" />
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-foreground font-semibold">3. Start your journey</h3>
@@ -55,8 +55,8 @@ export function FeatureSection() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <Calendar className="text-primary h-5 w-5" />
+            <div className="bg-background flex h-16 w-16 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
+              <Calendar className="text-primary h-7 w-7" />
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-foreground font-semibold">4. Grow and heal</h3>

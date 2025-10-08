@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Tagline } from "@/components/landing/shared/tagline";
+import { Highlighter } from "@/components/ui/highlighter";
 
 export function BentoGrid() {
   return (
@@ -14,7 +15,10 @@ export function BentoGrid() {
           <Tagline>Platform Features</Tagline>
           {/* Main Heading */}
           <h2 className="heading-lg">
-            Everything you need for your mental health journey
+            Everything you need for your{" "}
+            <Highlighter action="highlight" color="#87CEFA" animationDuration={1000} isView>
+              mental health journey
+            </Highlighter>
           </h2>
         </div>
 
