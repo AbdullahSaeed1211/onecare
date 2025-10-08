@@ -23,15 +23,15 @@ export function BentoGrid() {
           {/* Wide Feature Card - Top Left */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-2">
             <Image
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=813&h=332&fit=crop&crop=center"
-              alt="Secure messaging platform"
+              src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=813&h=332&fit=crop&crop=center"
+              alt="Therapist and client having a secure video consultation"
               width={813}
               height={332}
               className="hidden h-auto w-full object-cover md:block md:h-[332px]"
             />
             <Image
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=480&h=332&fit=crop&crop=center"
-              alt="Secure messaging platform"
+              src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=480&h=332&fit=crop&crop=center"
+              alt="Therapist and client having a secure video consultation"
               width={480}
               height={332}
               className="block h-auto w-full md:hidden"
@@ -48,8 +48,8 @@ export function BentoGrid() {
           {/* Regular Feature Card - Top Right */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-1">
             <Image
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=480&h=332&fit=crop&crop=center"
-              alt="Progress tracking dashboard"
+              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=480&h=332&fit=crop&crop=center"
+              alt="Mental health progress tracking and goal setting interface"
               width={480}
               height={332}
               className="h-auto w-full object-cover md:h-[332px]"
@@ -66,8 +66,8 @@ export function BentoGrid() {
           {/* Regular Feature Card - Bottom Left */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-1">
             <Image
-              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=480&h=332&fit=crop&crop=center"
-              alt="Resource library with books and articles"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=332&fit=crop&crop=center"
+              alt="Mental health resource library with wellness articles and exercises"
               width={480}
               height={332}
               className="h-auto w-full object-cover md:h-[332px]"
@@ -84,15 +84,15 @@ export function BentoGrid() {
           {/* Wide Feature Card - Bottom Right */}
           <Card className="bg-muted/80 gap-0 overflow-hidden rounded-xl border-none p-0 shadow-none lg:col-span-2">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=813&h=332&fit=crop&crop=center"
-              alt="Easy scheduling calendar interface"
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=813&h=332&fit=crop&crop=center"
+              alt="Professional healthcare scheduling and appointment booking interface"
               width={813}
               height={332}
               className="hidden h-[332px] w-full object-cover md:block"
             />
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=332&fit=crop&crop=center"
-              alt="Easy scheduling calendar interface"
+              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=480&h=332&fit=crop&crop=center"
+              alt="Professional healthcare scheduling and appointment booking interface"
               width={480}
               height={332}
               className="block h-auto w-full object-cover md:hidden md:h-[332px]"
