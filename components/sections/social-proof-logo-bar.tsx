@@ -25,7 +25,7 @@ const trustIndicators = [
 
 export function SocialProofLogoBar() {
   return (
-    <>
+    <div className="py-8 md:py-12">
       <style jsx global>{`
         @keyframes marquee {
           0% {
@@ -36,7 +36,7 @@ export function SocialProofLogoBar() {
           }
         }
       `}</style>
-      <section className="bg-background border-b py-6 md:py-12">
+      <section className="bg-background border-b pt-2">
         <div className="container-padding-x container mx-auto">
         <div className="text-center mb-8">
           <Tagline>Trusted By</Tagline>
@@ -110,11 +110,11 @@ export function SocialProofLogoBar() {
                 <Star key={i} className="h-4 w-4 fill-warning text-warning" />
               ))}
             </div>
-            <span className="text-sm font-medium text-foreground ml-2">4.9/5 from 2,500+ reviews</span>
+            <span className="text-sm font-medium text-foreground ml-2 pb-2">4.9/5 from 2,500+ reviews</span>
           </div>
         </div>
       </div>
     </section>
-    </>
+    </div>
   );
 }
