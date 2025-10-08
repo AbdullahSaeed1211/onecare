@@ -25,7 +25,7 @@ const NavMenuItems = ({ className }: NavMenuItemsProps) => (
       <Link key={label} href={href} className="touch-manipulation">
         <Button
           variant="ghost"
-          className="w-full md:w-auto justify-start md:justify-center min-h-12 md:min-h-10 touch-manipulation active:scale-95 transition-transform"
+          className="w-full md:w-auto justify-start md:justify-center min-h-12 md:min-h-10 touch-manipulation active:scale-95 transition-all duration-200 hover:bg-accent/10 hover:text-accent-foreground"
         >
           {label}
         </Button>
@@ -60,10 +60,10 @@ export function Navbar() {
         <div className="hidden w-full flex-row justify-end gap-5 md:flex">
           <NavMenuItems />
           <ContactModal>
-            <Button variant="outline">Contact Us</Button>
+            <Button variant="outline" className="hover:scale-105 transition-all duration-200">Contact Us</Button>
           </ContactModal>
           <Link href="#pricing">
-            <Button>Get Started</Button>
+            <Button className="hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg">Get Started</Button>
           </Link>
         </div>
 
@@ -73,12 +73,12 @@ export function Navbar() {
             <NavMenuItems />
             <div className="flex flex-col gap-3 pt-2">
               <ContactModal>
-                <Button variant="outline" className="w-full min-h-12 touch-manipulation active:scale-95 transition-transform">
+                <Button variant="outline" className="w-full min-h-12 touch-manipulation active:scale-95 hover:scale-105 transition-all duration-200">
                   Contact Us
                 </Button>
               </ContactModal>
               <Link href="#pricing" className="touch-manipulation">
-                <Button className="w-full min-h-12 touch-manipulation active:scale-95 transition-transform">
+                <Button className="w-full min-h-12 touch-manipulation active:scale-95 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg">
                   Get Started
                 </Button>
               </Link>
