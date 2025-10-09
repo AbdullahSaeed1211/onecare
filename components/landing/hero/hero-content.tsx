@@ -7,28 +7,10 @@ import { Highlighter } from "@/components/ui/highlighter";
 import { ProgressiveImage } from "@/components/ui/progressive-image";
 import { blurPlaceholders } from "@/lib/image-utils";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export function HeroContent() {
   const heroRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = heroRef.current?.querySelectorAll('.animate-on-scroll');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -42,91 +24,113 @@ export function HeroContent() {
       </div>
       <div className="container-padding-x container mx-auto flex flex-col items-center gap-6 lg:flex-row lg:gap-12">
         {/* Left Column */}
-        <div className="flex flex-[0_0_40%] flex-col gap-6 lg:gap-8">
+        <div className="flex flex-[0_0_50%] flex-col gap-6 lg:gap-8">
           {/* Section Title */}
-          <div className="section-title-gap-xl flex flex-col animate-on-scroll opacity-0 translate-y-2 transition-all duration-1000 ease-out">
+          <div className="section-title-gap-xl flex flex-col">
             {/* Tagline */}
-            <Tagline className="animate-on-scroll opacity-0 translate-y-1 transition-all duration-800 delay-300 ease-out">
-              One<span className="text-accent font-semibold">Care</span>
-            </Tagline>
+            <BlurFade direction="up" duration={0.5} offset={12} blur="6px">
+              <Tagline>
+                One<span className="text-accent font-semibold">Care</span>
+              </Tagline>
+            </BlurFade>
             {/* Main Heading */}
-            <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight animate-on-scroll opacity-0 translate-y-2 transition-all duration-1000 delay-600 ease-out">
-              Quality{" "}
-              <Highlighter action="underline" color="#FF9800" animationDuration={1200} isView>
-                mental health
-              </Highlighter>{" "}
-              support, made simple and{" "}
-              <Highlighter action="highlight" color="#87CEFA" animationDuration={1200} isView>
-                accessible
-              </Highlighter>
-            </h1>
+            <BlurFade direction="up" duration={0.6} delay={0.06} offset={16} blur="8px">
+              <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                Quality{" "}
+                <Highlighter action="underline" color="#FF9800" animationDuration={1200} isView>
+                  mental health
+                </Highlighter>{" "}
+                support, made simple and{" "}
+                <Highlighter action="highlight" color="#87CEFA" animationDuration={1200} isView>
+                  accessible
+                </Highlighter>
+              </h1>
+            </BlurFade>
             {/* Description */}
-            <p className="text-muted-foreground text-base lg:text-lg animate-on-scroll opacity-0 translate-y-1 transition-all duration-800 delay-900 ease-out">
-              Connect with licensed therapists, psychiatrists, and wellness professionals
-              for personalized care that fits your lifestyle and goals
-            </p>
+            <BlurFade direction="up" duration={0.6} delay={0.12} offset={12} blur="8px">
+              <p className="text-muted-foreground text-base lg:text-lg">
+                Connect with licensed therapists, psychiatrists, and wellness professionals
+                for personalized care that fits your lifestyle and goals
+              </p>
+            </BlurFade>
           </div>
 
           {/* Feature List */}
-          <div className="flex flex-col gap-2 md:gap-3 animate-on-scroll opacity-0 translate-y-2 transition-all duration-800 delay-1200 ease-out">
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1400 ease-out">
-              <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1600 ease-out" />
+          <div className="flex flex-col gap-2 md:gap-3">
+            <BlurFade direction="up" duration={0.5} delay={0.06} offset={10} blur="8px">
+              <div className="flex items-start gap-3">
+                <div className="pt-0.5">
+                  <Check className="text-primary h-5 w-5" />
+                </div>
+                <span className="text-card-foreground text-base leading-6 font-medium">
+                  Licensed therapists and psychiatrists
+                </span>
               </div>
-              <span className="text-card-foreground text-base leading-6 font-medium">
-                Licensed therapists and psychiatrists
-              </span>
-            </div>
+            </BlurFade>
 
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1400 ease-out">
-              <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1600 ease-out" />
+            <BlurFade direction="up" duration={0.5} delay={0.12} offset={10} blur="8px">
+              <div className="flex items-start gap-3">
+                <div className="pt-0.5">
+                  <Check className="text-primary h-5 w-5" />
+                </div>
+                <span className="text-card-foreground text-base leading-6 font-medium">
+                  Both online and in-person sessions
+                </span>
               </div>
-              <span className="text-card-foreground text-base leading-6 font-medium">
-                Both online and in-person sessions
-              </span>
-            </div>
+            </BlurFade>
 
-            <div className="flex items-start gap-3 animate-on-scroll opacity-0 translate-x-2 transition-all duration-600 delay-1400 ease-out">
-              <div className="pt-0.5">
-                <Check className="text-primary h-5 w-5 animate-on-scroll opacity-0 scale-90 transition-all duration-500 delay-1600 ease-out" />
+            <BlurFade direction="up" duration={0.5} delay={0.18} offset={10} blur="8px">
+              <div className="flex items-start gap-3">
+                <div className="pt-0.5">
+                  <Check className="text-primary h-5 w-5" />
+                </div>
+                <span className="text-card-foreground text-base leading-6 font-medium">
+                  Personalized care that fits your schedule
+                </span>
               </div>
-              <span className="text-card-foreground text-base leading-6 font-medium">
-                Personalized care that fits your schedule
-              </span>
-            </div>
+            </BlurFade>
           </div>
 
           {/* Trust Signals */}
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground animate-on-scroll opacity-0 translate-y-2 transition-all duration-600 delay-2200 ease-out">
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2400 ease-out">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
-              <span>No commitment required</span>
-            </div>
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2400 ease-out">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
-              <span>Free initial consultation</span>
-            </div>
-            <div className="flex items-center gap-2 animate-on-scroll opacity-0 translate-y-1 transition-all duration-500 delay-2400 ease-out">
-              <Check className="text-success h-4 w-4 animate-on-scroll opacity-0 scale-90 transition-all duration-400 delay-2500 ease-out" />
-              <span>Cancel anytime</span>
-            </div>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+            <BlurFade direction="up" duration={0.45} delay={0.06} offset={8} blur="6px">
+              <div className="flex items-center gap-2">
+                <Check className="text-success h-4 w-4" />
+                <span>No commitment required</span>
+              </div>
+            </BlurFade>
+            <BlurFade direction="up" duration={0.45} delay={0.12} offset={8} blur="6px">
+              <div className="flex items-center gap-2">
+                <Check className="text-success h-4 w-4" />
+                <span>Free initial consultation</span>
+              </div>
+            </BlurFade>
+            <BlurFade direction="up" duration={0.45} delay={0.18} offset={8} blur="6px">
+              <div className="flex items-center gap-2">
+                <Check className="text-success h-4 w-4" />
+                <span>Cancel anytime</span>
+              </div>
+            </BlurFade>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:gap-3 animate-on-scroll opacity-0 translate-y-2 transition-all duration-600 delay-2800 ease-out">
-            <Button size="lg" className="text-base px-8 py-3 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-on-scroll opacity-0 scale-95 transition-all duration-500 delay-3000 ease-out">
-              Get Started Today
-            </Button>
-            <Button variant="outline" size="lg" className="text-base px-6 py-3 border-2 hover:bg-accent hover:border-accent hover:scale-105 transition-all duration-300 animate-on-scroll opacity-0 scale-95 transition-all duration-500 delay-3100 ease-out">
-              How it works
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-3">
+            <BlurFade direction="up" duration={0.5} delay={0.06} offset={10} blur="8px">
+              <Button size="lg" className="text-base px-8 py-3 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                Get Started Today
+              </Button>
+            </BlurFade>
+            <BlurFade direction="up" duration={0.5} delay={0.12} offset={10} blur="8px">
+              <Button variant="outline" size="lg" className="text-base px-6 py-3 border-2 hover:bg-accent hover:border-accent hover:scale-105 transition-all duration-300">
+                How it works
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </BlurFade>
           </div>
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-[0_0_60%] relative w-full max-w-4xl aspect-[4/3]">
+        <div className="flex flex-[0_0_50%] relative w-full max-w-4xl aspect-[4/3]">
           {/* Main Image */}
           <BlurFade
             direction="up"
