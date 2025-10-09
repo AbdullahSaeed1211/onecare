@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tagline } from "@/components/landing/shared/tagline";
 import { Users, Award, Heart, TrendingUp } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { Highlighter } from "@/components/ui/highlighter"
 
 const statsData = [
   {
@@ -56,7 +57,11 @@ export function StatsSection() {
         <div className="flex flex-col gap-10 md:gap-12">
           <div className="section-title-gap-lg mx-auto flex max-w-xl flex-col items-center text-center animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
             <Tagline className="animate-on-scroll opacity-0 translate-y-2 transition-all duration-500 delay-100">Impact</Tagline>
-            <h2 className="heading-lg text-foreground animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 delay-200">Transforming mental health care</h2>
+            <h2 className="heading-lg text-foreground animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 delay-200">Transforming {""}
+              <Highlighter action="underline" color="#FF9800" animationDuration={900} isView delayMs={150}>
+                mental health
+              </Highlighter>{" "}care
+            </h2>
             <p className="text-muted-foreground animate-on-scroll opacity-0 translate-y-2 transition-all duration-500 delay-300">
               Our commitment to accessible, personalized mental health care
               is making a real difference in people&apos;s lives.

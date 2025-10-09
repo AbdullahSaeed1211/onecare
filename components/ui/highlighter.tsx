@@ -25,6 +25,7 @@ interface HighlighterProps {
   padding?: number
   multiline?: boolean
   isView?: boolean
+  delayMs?: number
 }
 
 export function Highlighter({
@@ -37,6 +38,7 @@ export function Highlighter({
   padding = 2,
   multiline = true,
   isView = false,
+  delayMs = 0,
 }: HighlighterProps) {
   const elementRef = useRef<HTMLSpanElement>(null)
   const annotationRef = useRef<RoughAnnotation | null>(null)
@@ -68,7 +70,10 @@ export function Highlighter({
     const annotation = annotate(element, annotationConfig)
 
     annotationRef.current = annotation
-    annotationRef.current.show()
+
+    const timeoutId = window.setTimeout(() => {
+      annotationRef.current?.show()
+    }, Math.max(0, delayMs))
 
     const resizeObserver = new ResizeObserver(() => {
       annotation.hide()
@@ -83,6 +88,7 @@ export function Highlighter({
         annotate(element, { type: action }).remove()
         resizeObserver.disconnect()
       }
+      window.clearTimeout(timeoutId)
     }
   }, [
     shouldShow,
@@ -93,6 +99,7 @@ export function Highlighter({
     iterations,
     padding,
     multiline,
+    delayMs,
   ])
 
   return (

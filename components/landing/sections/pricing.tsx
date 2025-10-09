@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Tagline } from "@/components/landing/shared/tagline";
 import { VariantProps } from "class-variance-authority";
+import { Highlighter } from "@/components/ui/highlighter"
 
 const pricingData = {
   plans: [
@@ -80,7 +81,10 @@ export function PricingSection() {
               id="pricing-section-title"
               className="heading-lg text-foreground"
             >
-              Quality care that fits your budget
+              Quality care that fits your {""}
+              <Highlighter action="underline" color="#FF9800" animationDuration={900} isView delayMs={180}>
+                budget
+              </Highlighter>
             </h2>
           </div>
 

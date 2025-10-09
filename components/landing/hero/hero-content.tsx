@@ -37,11 +37,11 @@ export function HeroContent() {
             <BlurFade direction="up" duration={0.6} delay={0.06} offset={16} blur="8px">
               <h1 id="hero-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Quality{" "}
-                <Highlighter action="underline" color="#FF9800" animationDuration={1200} isView>
+                <Highlighter action="underline" color="#FF9800" animationDuration={1400} isView>
                   mental health
                 </Highlighter>{" "}
                 support, made simple and{" "}
-                <Highlighter action="highlight" color="#87CEFA" animationDuration={1200} isView>
+                <Highlighter action="highlight" color="#87CEFA" animationDuration={1400} isView>
                   accessible
                 </Highlighter>
               </h1>

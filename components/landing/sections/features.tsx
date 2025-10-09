@@ -2,6 +2,7 @@
 
 import { User, MessageSquare, Heart, Calendar } from "lucide-react";
 import { Tagline } from "@/components/landing/shared/tagline";
+import { Highlighter } from "@/components/ui/highlighter"
 
 export function FeatureSection() {
   return (
@@ -11,9 +12,17 @@ export function FeatureSection() {
     >
       <div className="container-padding-x container mx-auto flex flex-col gap-10 md:gap-12">
         <div className="section-title-gap-lg mx-auto flex max-w-xl flex-col items-center text-center">
-          <Tagline>How it works</Tagline>
+          <Tagline>
+            How it{" "}
+            <Highlighter action="underline" color="#FF9800" animationDuration={900} isView delayMs={150}>
+              works
+            </Highlighter>
+          </Tagline>
           <h2 className="heading-lg text-foreground">
-            Your path to better mental health
+            Your path to better{" "}
+            <Highlighter action="highlight" color="#87CEFA" animationDuration={900} isView delayMs={250}>
+              mental health
+            </Highlighter>
           </h2>
           <p className="text-muted-foreground text-base">
             We make finding and accessing quality mental health care simple,

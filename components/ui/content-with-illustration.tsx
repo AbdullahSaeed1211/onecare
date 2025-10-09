@@ -19,7 +19,7 @@ interface ContentWithIllustrationProps {
   paragraphs: string[];
   imageSrc: string;
   imageAlt?: string;
-  iconSrc: string;
+  iconSrc?: string;
   iconAlt?: string;
   className?: string;
 }
@@ -93,15 +93,17 @@ export const ContentWithIllustration: React.FC<ContentWithIllustrationProps> = (
 
         {/* Right Column: Illustration */}
         <div className="relative flex justify-center items-center h-full">
-          <Image
-            src={iconSrc}
-            alt={iconAlt}
-            width={64}
-            height={64}
-            className="absolute top-0 right-0 md:right-10 w-16 h-16 animate-subtle-spin"
-            aria-hidden="true"
-            priority={false}
-          />
+          {iconSrc && (
+            <Image
+              src={iconSrc}
+              alt={iconAlt}
+              width={64}
+              height={64}
+              className="absolute top-0 right-0 md:right-10 w-16 h-16 animate-subtle-spin"
+              aria-hidden="true"
+              priority={false}
+            />
+          )}
           <Image
             src={imageSrc}
             alt={imageAlt}

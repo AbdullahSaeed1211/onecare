@@ -15,8 +15,7 @@ export function TherapySection() {
         ]}
         imageSrc="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&crop=center"
         imageAlt="Therapist in session with client"
-        iconSrc="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=64&h=64&fit=crop&crop=center"
-        iconAlt="Heart icon representing care"
+        // iconSrc removed to disable rotating decorative icon
       />
 
       <TestimonialsSection

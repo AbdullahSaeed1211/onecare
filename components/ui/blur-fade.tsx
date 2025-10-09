@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import {
   AnimatePresence,
   motion,
@@ -26,6 +26,7 @@ interface BlurFadeProps extends MotionProps {
   inView?: boolean
   inViewMargin?: MarginType
   blur?: string
+  respectReducedMotion?: boolean
 }
 
 export function BlurFade({
@@ -39,9 +40,19 @@ export function BlurFade({
   inView = false,
   inViewMargin = "-50px",
   blur = "6px",
+  respectReducedMotion = true,
   ...props
 }: BlurFadeProps) {
   const ref = useRef(null)
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+  useEffect(() => {
+    if (!respectReducedMotion || typeof window === "undefined") return
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
+    const update = () => setPrefersReducedMotion(mediaQuery.matches)
+    update()
+    mediaQuery.addEventListener?.("change", update)
+    return () => mediaQuery.removeEventListener?.("change", update)
+  }, [respectReducedMotion])
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
   const defaultVariants: Variants = {
@@ -62,13 +73,13 @@ export function BlurFade({
     <AnimatePresence>
       <motion.div
         ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        initial={prefersReducedMotion ? "visible" : "hidden"}
+        animate={prefersReducedMotion ? "visible" : isInView ? "visible" : "hidden"}
         exit="hidden"
         variants={combinedVariants}
         transition={{
-          delay: 0.04 + delay,
-          duration,
+          delay: prefersReducedMotion ? 0 : 0.04 + delay,
+          duration: prefersReducedMotion ? 0 : duration,
           ease: "easeOut",
         }}
         className={className}

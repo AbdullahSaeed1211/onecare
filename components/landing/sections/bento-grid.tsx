@@ -16,7 +16,7 @@ export function BentoGrid() {
           {/* Main Heading */}
           <h2 className="heading-lg">
             Everything you need for your{" "}
-            <Highlighter action="highlight" color="#87CEFA" animationDuration={1000} isView>
+            <Highlighter action="box" color="#FF9800" animationDuration={900} isView delayMs={180}>
               mental health journey
             </Highlighter>
           </h2>

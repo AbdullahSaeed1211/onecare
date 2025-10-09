@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Highlighter } from "@/components/ui/highlighter"
 
 const professionals = [
   {
@@ -47,7 +48,11 @@ export function ProfessionalsSection() {
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col gap-10 md:gap-12">
           <div className="section-title-gap-lg mx-auto flex max-w-2xl flex-col items-center text-center">
-            <h2 className="heading-lg text-foreground">Meet Our Featured Providers</h2>
+            <h2 className="heading-lg text-foreground">Meet Our Featured {""}
+              <Highlighter action="bracket" color="#FF9800" animationDuration={900} isView delayMs={220}>
+                Providers
+              </Highlighter>
+            </h2>
             <p className="text-muted-foreground text-lg">
               Connect with licensed professionals who are committed to your mental health journey.
               Each provider brings unique expertise and a compassionate approach to care.

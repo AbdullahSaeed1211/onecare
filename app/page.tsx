@@ -9,6 +9,7 @@ import { TherapySection } from "@/components/sections/therapy-section";
 import { PricingSection } from "@/components/landing/sections/pricing";
 import { InsuranceIntegrationSection } from "@/components/sections/insurance-integration-section";
 import { FaqFooterSection } from "@/components/sections/faq-footer-section";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 export default function Page() {
   return (
@@ -23,29 +24,38 @@ export default function Page() {
 
         <HeroSection />
 
-        <SocialProofLogoBar />
+          <SocialProofLogoBar />
 
-        <ServicesSection />
-        <OnboardingChecklistSection />
+        
+          <ServicesSection />
+          <OnboardingChecklistSection />
 
         {/* Landing Wide Stats Background */}
         <div className="relative overflow-hidden bg-gradient-to-l from-secondary via-background to-secondary">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
-          <div className="relative">
-            <StatsSection />
-          </div>
+          <BlurFade inView direction="up" duration={0.5} offset={8} blur="8px">
+            <div className="relative">
+              <StatsSection />
+            </div>
+          </BlurFade>
         </div>
 
-        <ProfessionalsSection />
-        <TherapySection />
-        <PricingSection />
-        <InsuranceIntegrationSection />
+          <ProfessionalsSection />
+        
+          <TherapySection />
+        
+          <PricingSection />
+        
+          <InsuranceIntegrationSection />
+        
 
         {/* Landing Wide Footer Background */}
         <div className="relative overflow-hidden bg-gradient-to-t from-primary/10 via-transparent to-background">
-          <div className="relative">
-            <FaqFooterSection />
-          </div>
+          <BlurFade inView direction="up" duration={0.5} offset={8} blur="8px">
+            <div className="relative">
+              <FaqFooterSection />
+            </div>
+          </BlurFade>
         </div>
       </main>
     </ErrorBoundary>
